@@ -1,13 +1,15 @@
-import Navigation from '../Navigation';
-import Footer from '../Footer';
+import Head from 'next/head';
+import Header from '../Header';
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <Navigation />
+    <>
+      <Head>
+        <title>Roma Doces de Vitrine</title>
+      </Head>
+      <Header />
       {children}
-      <Footer />
-    </div>
+    </>
   );
 };
 

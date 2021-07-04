@@ -1,0 +1,10 @@
+.icon-box {
+  display: inline-block;
+  display: absolute;
+  top: 0;
+  right: 0;
+
+  &__icon {
+    font-size: 3rem;
+  }
+}
