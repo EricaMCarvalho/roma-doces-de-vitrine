@@ -1,3 +1,17 @@
+/*
+#fec89a
+#ffd7ba
+#FFE5D9
+#ECE4DB
+#D8E2DC
+#E8E8E4
+#F8EDEB
+#FAE1DD
+#FCD5CE
+#FEC5BB
+*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 *,
 *::before,
 *::after {
@@ -5,13 +19,56 @@
   padding: 0;
   box-sizing: inherit; }
 
+li {
+  list-style: none; }
+
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
 body {
   font-size: 1.2rem;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif; }
+
+.heading-primary {
+  color: #dfb183;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 300;
+  text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  padding: 1rem; }
+
+.heading-secondary {
+  font-family: 'Pinyon Script', cursive;
+  color: #333;
+  font-size: 2.5rem;
+  color: #dfb183;
+  text-align: center; }
+
+.heading-tertiary {
+  text-transform: uppercase; }
+
+.button {
+  padding: 1rem;
+  background-color: #fcece5;
+  color: #dfb183;
+  border-radius: 20px;
+  border: 1px solid #e6bf98;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  letter-spacing: 1px;
+  cursor: pointer; }
+  .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.2); }
+  .button:active {
+    transform: translate(1px);
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.2); }
 
 .icon-box {
   display: inline-block;
@@ -21,6 +78,42 @@ body {
   .icon-box__icon {
     font-size: 3rem; }
 
+.footer {
+  background-color: #fcece5;
+  color: #dfb183;
+  width: 100%;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2); }
+  .footer__text {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    clear: both;
+    display: table; }
+  .row [class^='col-'] {
+    float: left; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc( 2 * (100% - 3 * 6rem) / 4 + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * (100% - 3 * 6rem) / 4 + 2 * 6rem); }
+
 .header {
   padding: 1rem;
   position: fixed;
@@ -28,19 +121,25 @@ body {
   left: 0;
   height: 9rem;
   width: 100%;
-  background-color: #000; }
+  background-color: #fcece5;
+  z-index: 1000;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2); }
   .header__logo-box {
     float: left; }
   .header__button {
     position: absolute;
     cursor: pointer;
     height: 7rem;
-    width: 7rem; }
+    width: 5.5rem; }
   .header__button--right {
     right: 0; }
+  .header__button--left:hover {
+    transform: scale(1.1) translateY(-2px); }
+  .header__button--left:active {
+    transform: scale(1) translateY(1px); }
   .header__button--left {
     font-size: 3rem;
-    right: 7rem; }
+    right: 5.5rem; }
   .header__icon {
     color: #dfb183; }
     .header__icon {
@@ -48,6 +147,9 @@ body {
       top: 50%;
       left: 50%;
       transform: translateX(-50%) translateY(-50%); }
+
+.main {
+  margin-top: 9rem; }
 
 .navigation__checkbox {
   display: none; }
@@ -67,10 +169,10 @@ body {
   content: ''; }
 
 .navigation__icon::before {
-  top: -1rem; }
+  top: -1.1rem; }
 
 .navigation__icon::after {
-  top: 1rem; }
+  top: 1.1rem; }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1.3rem; }
@@ -93,7 +195,7 @@ body {
 
 .navigation__nav {
   position: fixed;
-  background-color: #000;
+  background-color: #fcece5;
   top: 9rem;
   right: -30rem;
   width: 30rem;
@@ -106,13 +208,32 @@ body {
     border-bottom: 1px solid #dfb183; }
 
 .navigation__link {
-  display: inline-block;
+  display: block;
   text-transform: uppercase;
   font-size: 1.4rem;
   color: #dfb183;
   padding: 2rem;
   text-decoration: none;
   letter-spacing: 2px; }
+  .navigation__link:hover {
+    background-color: #dfb183;
+    color: #fcece5; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   transform: translateX(-30rem); }
+
+.hero {
+  height: 70vh; }
+  .hero__text {
+    text-align: center;
+    width: 100%; }
+    .hero__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%); }
+  .hero__images {
+    position: relative; }
+  .hero__image {
+    position: absolute;
+    top: 0; }

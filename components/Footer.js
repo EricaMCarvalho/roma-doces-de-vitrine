@@ -1,5 +1,11 @@
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className='footer'>
+      <p className='footer__text'>
+        &copy; {new Date().getFullYear()} Roma Doces de Vitrine
+      </p>
+    </footer>
+  );
 };
 
 export default Footer;

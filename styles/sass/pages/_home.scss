@@ -1,0 +1,18 @@
+.hero {
+  height: 70vh;
+
+  &__text {
+    @include abs-center;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+  }
+}

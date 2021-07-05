@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from '../Header';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   return (
@@ -8,7 +9,8 @@ const Layout = ({ children }) => {
         <title>Roma Doces de Vitrine</title>
       </Head>
       <Header />
-      {children}
+      <main className='main'>{children}</main>
+      <Footer />
     </>
   );
 };

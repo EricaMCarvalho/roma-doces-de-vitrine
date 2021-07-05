@@ -1,31 +1,33 @@
+import Link from 'next/link';
+
 const Nav = () => {
   return (
     <nav className='navigation__nav'>
       <ul className='navigation__list'>
         <li className='navigation__item'>
-          <a href='' className='navigation__link'>
-            Nossos Produtos
-          </a>
+          <Link href='/produtos'>
+            <a className='navigation__link'>Nossos Produtos</a>
+          </Link>
         </li>
         <li className='navigation__item'>
-          <a href='' className='navigation__link'>
-            Fale Conosco
-          </a>
+          <Link href='/contato'>
+            <a className='navigation__link'>Fale Conosco</a>
+          </Link>
         </li>
         <li className='navigation__item'>
-          <a href='' className='navigation__link'>
-            Sua sacola
-          </a>
+          <Link href='/sacola'>
+            <a className='navigation__link'>Sua sacola</a>
+          </Link>
         </li>
         <li className='navigation__item'>
-          <a href='' className='navigation__link'>
-            Meus pedidos
-          </a>
+          <Link href='/pedidos'>
+            <a className='navigation__link'>Seus pedidos</a>
+          </Link>
         </li>
         <li className='navigation__item'>
-          <a href='' className='navigation__link'>
-            Entre ou cadastre-se
-          </a>
+          <Link href='/login'>
+            <a className='navigation__link'>Entre ou cadastre-se</a>
+          </Link>
         </li>
       </ul>
     </nav>
