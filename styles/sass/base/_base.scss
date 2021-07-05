@@ -11,6 +11,22 @@ li {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    font-size: 70%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 72%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 85%;
+  }
 }

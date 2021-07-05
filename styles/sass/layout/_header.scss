@@ -3,7 +3,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 9rem;
+  height: 8rem;
   width: 100%;
   background-color: $color-primary-light;
   z-index: 1000;
@@ -16,7 +16,7 @@
   &__button {
     position: absolute;
     cursor: pointer;
-    height: 7rem;
+    height: 8rem;
     width: 5.5rem;
   }
 

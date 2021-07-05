@@ -1,5 +1,5 @@
 .hero {
-  height: 80vh;
+  height: 90vh;
   position: relative;
   background-image: url(../public/images/macaron.png);
   background-size: cover;
@@ -9,7 +9,7 @@
     width: 100%;
     background-color: white;
     position: absolute;
-    top: 15rem;
+    top: 13rem;
     animation: moveInBottom 1s;
 
     &:before,
@@ -22,13 +22,13 @@
     }
 
     &:before {
-      top: -6rem;
+      top: -60px;
       background-image: url(../public/images/up.png);
       background-size: repeat-x;
     }
 
     &:after {
-      bottom: -8rem;
+      bottom: -70px;
       background-image: url(../public/images/down.png);
       background-size: repeat-x;
     }

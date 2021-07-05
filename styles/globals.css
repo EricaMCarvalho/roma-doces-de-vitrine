@@ -32,6 +32,18 @@ li {
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media (min-width: 37.5em) {
+    html {
+      font-size: 70%; } }
+  @media (min-width: 56.25em) {
+    html {
+      font-size: 72%; } }
+  @media (min-width: 56.25em) {
+    html {
+      font-size: 75%; } }
+  @media (min-width: 56.25em) {
+    html {
+      font-size: 85%; } }
 
 @keyframes moveInBottom {
   0% {
@@ -61,7 +73,8 @@ body {
   color: #333;
   font-size: 2.5rem;
   color: #dfb183;
-  text-align: center; }
+  text-align: center;
+  padding: 1rem; }
 
 .heading-tertiary {
   text-transform: uppercase; }
@@ -113,7 +126,7 @@ body {
     font-size: 1.2rem; }
 
 .row {
-  max-width: 114rem;
+  max-width: 90vw;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -143,7 +156,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 9rem;
+  height: 8rem;
   width: 100%;
   background-color: white;
   z-index: 1000;
@@ -153,7 +166,7 @@ body {
   .header__button {
     position: absolute;
     cursor: pointer;
-    height: 7rem;
+    height: 8rem;
     width: 5.5rem; }
   .header__button--right {
     right: 0; }
@@ -173,7 +186,7 @@ body {
       transform: translateX(-50%) translateY(-50%); }
 
 .main {
-  margin-top: 9rem; }
+  margin-top: 7rem; }
 
 .navigation__checkbox {
   display: none; }
@@ -220,7 +233,7 @@ body {
 .navigation__nav {
   position: fixed;
   background-color: white;
-  top: 9rem;
+  top: 8rem;
   right: -30rem;
   width: 30rem;
   height: 100vh;
@@ -247,7 +260,7 @@ body {
   transform: translateX(-30rem); }
 
 .hero {
-  height: 80vh;
+  height: 90vh;
   position: relative;
   background-image: url(../public/images/macaron.png);
   background-size: cover; }
@@ -256,7 +269,7 @@ body {
     width: 100%;
     background-color: white;
     position: absolute;
-    top: 15rem;
+    top: 13rem;
     animation: moveInBottom 1s; }
     .hero__text:before, .hero__text:after {
       content: '';
@@ -265,11 +278,11 @@ body {
       width: 100%;
       height: 80px; }
     .hero__text:before {
-      top: -6rem;
+      top: -60px;
       background-image: url(../public/images/up.png);
       background-size: repeat-x; }
     .hero__text:after {
-      bottom: -8rem;
+      bottom: -70px;
       background-image: url(../public/images/down.png);
       background-size: repeat-x; }
   .hero__images {

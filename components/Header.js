@@ -13,8 +13,9 @@ const Header = () => {
             <Image
               src='/images/roma-text.png'
               alt='Roma'
-              width='190'
-              height='70px'
+              width='180'
+              height='60px'
+              className='logo-image'
             />
           </a>
         </Link>

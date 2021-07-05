@@ -22,6 +22,9 @@ Breakpoint accepts:
 - desktop
 - big-desktop
 */
+
+// Base + typography > general layout, grid, page layout > components
+
 @mixin respond($breakpoint) {
   @if $breakpoint == tab-port {
     @media (min-width: 37.5em) {
