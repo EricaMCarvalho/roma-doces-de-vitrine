@@ -1,15 +1,11 @@
 import { Fragment } from 'react';
 import ProductDetails from '../../components/products/ProductDetails';
-import { useRouter } from 'next/router';
-import { getProductById } from '../../data/products';
+import Alert from '../../components/ui/Alert';
+import { getAllProducts, getProductById } from '../../data/products';
 
-const ProductDetailsPage = () => {
-  const router = useRouter();
-
-  const product = getProductById(router.query.productId);
-
+const ProductDetailsPage = ({ product }) => {
   if (!product) {
-    return <p>No product</p>;
+    return <Alert variant='danger'>Produto não encontrado</Alert>;
   }
 
   return (
@@ -18,6 +14,25 @@ const ProductDetailsPage = () => {
       <ProductDetails product={product} />
     </Fragment>
   );
+};
+
+export const getStaticProps = async (context) => {
+  const product = getProductById(context.params.productId);
+
+  return {
+    props: {
+      product,
+    },
+  };
+};
+
+export const getStaticPaths = async () => {
+  const products = getAllProducts();
+
+  return {
+    paths: products.map((product) => ({ params: { productId: product.id } })),
+    fallback: 'blocking',
+  };
 };
 
 export default ProductDetailsPage;

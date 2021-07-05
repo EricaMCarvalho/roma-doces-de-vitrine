@@ -1,0 +1,10 @@
+.alert {
+  padding: 1rem;
+  &--success {
+    background-color: $color-success;
+  }
+
+  &--danger {
+    background-color: $color-danger;
+  }
+}

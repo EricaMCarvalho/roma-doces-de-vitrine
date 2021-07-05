@@ -26,6 +26,14 @@ html {
   font-size: 62.5%;
   box-sizing: border-box; }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 body {
   font-size: 1.2rem;
   font-weight: 400;
@@ -38,7 +46,8 @@ body {
   text-align: center;
   font-weight: 300;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
-  padding: 1rem; }
+  padding: 1rem;
+  margin-top: 2rem; }
 
 .heading-secondary {
   font-family: 'Pinyon Script', cursive;
@@ -50,10 +59,17 @@ body {
 .heading-tertiary {
   text-transform: uppercase; }
 
+.alert {
+  padding: 1rem; }
+  .alert--success {
+    background-color: #d8e2dc; }
+  .alert--danger {
+    background-color: #fec5bb; }
+
 .button {
   padding: 1rem;
-  background-color: #fcece5;
-  color: #dfb183;
+  background-color: #dfb183;
+  color: white;
   border-radius: 20px;
   border: 1px solid #e6bf98;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -62,7 +78,8 @@ body {
   font-size: 1.2rem;
   transition: all 0.2s;
   letter-spacing: 1px;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
   .button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0.7rem 1.2rem rgba(0, 0, 0, 0.2); }
@@ -79,7 +96,7 @@ body {
     font-size: 3rem; }
 
 .footer {
-  background-color: #fcece5;
+  background-color: white;
   color: #dfb183;
   width: 100%;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2); }
@@ -121,7 +138,7 @@ body {
   left: 0;
   height: 9rem;
   width: 100%;
-  background-color: #fcece5;
+  background-color: white;
   z-index: 1000;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.2); }
   .header__logo-box {
@@ -195,7 +212,7 @@ body {
 
 .navigation__nav {
   position: fixed;
-  background-color: #fcece5;
+  background-color: white;
   top: 9rem;
   right: -30rem;
   width: 30rem;
@@ -217,21 +234,37 @@ body {
   letter-spacing: 2px; }
   .navigation__link:hover {
     background-color: #dfb183;
-    color: #fcece5; }
+    color: white; }
 
 .navigation__checkbox:checked ~ .navigation__nav {
   transform: translateX(-30rem); }
 
 .hero {
-  height: 70vh; }
+  height: 80vh;
+  position: relative;
+  background-image: url(../public/images/macaron.png);
+  background-size: cover; }
   .hero__text {
     text-align: center;
-    width: 100%; }
-    .hero__text {
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 15rem;
+    animation: moveInBottom 1s; }
+    .hero__text:before, .hero__text:after {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%); }
+      left: 0;
+      width: 100%;
+      height: 80px; }
+    .hero__text:before {
+      top: -6rem;
+      background-image: url(../public/images/up.png);
+      background-size: repeat-x; }
+    .hero__text:after {
+      bottom: -8rem;
+      background-image: url(../public/images/down.png);
+      background-size: repeat-x; }
   .hero__images {
     position: relative; }
   .hero__image {

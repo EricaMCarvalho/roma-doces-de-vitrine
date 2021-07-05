@@ -5,8 +5,18 @@ const Nav = () => {
     <nav className='navigation__nav'>
       <ul className='navigation__list'>
         <li className='navigation__item'>
+          <Link href='/'>
+            <a className='navigation__link'>Página inicial</a>
+          </Link>
+        </li>
+        <li className='navigation__item'>
           <Link href='/produtos'>
             <a className='navigation__link'>Nossos Produtos</a>
+          </Link>
+        </li>
+        <li className='navigation__item'>
+          <Link href='/sobre-nos'>
+            <a className='navigation__link'>Sobre nós</a>
           </Link>
         </li>
         <li className='navigation__item'>

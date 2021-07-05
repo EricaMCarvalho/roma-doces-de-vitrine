@@ -3,8 +3,7 @@ import Hero from '../components/Hero';
 import ProductList from '../components/products/ProductList';
 import { getFeaturedProducts } from '../data/products';
 
-const HomeScreen = () => {
-  const featuredProducts = getFeaturedProducts();
+const HomeScreen = ({ featuredProducts }) => {
   return (
     <Fragment>
       <Hero />
@@ -14,6 +13,16 @@ const HomeScreen = () => {
       <ProductList products={featuredProducts} />
     </Fragment>
   );
+};
+
+export const getStaticProps = async () => {
+  const featuredProducts = getFeaturedProducts();
+  return {
+    props: {
+      featuredProducts,
+    },
+    revalidate: 10,
+  };
 };
 
 export default HomeScreen;

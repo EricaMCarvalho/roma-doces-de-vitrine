@@ -4,12 +4,12 @@ const Button = (props) => {
   if (props.link) {
     return (
       <Link href={props.link}>
-        <a className='button'>{props.children}</a>
+        <a className={`button ${props.classes}`}>{props.children}</a>
       </Link>
     );
   }
   return (
-    <button className='button' onClick={props.onClick}>
+    <button className={`button ${props.classes}`} onClick={props.onClick}>
       {props.children}
     </button>
   );

@@ -14,7 +14,7 @@
 */
 
 $color-primary: rgb(223, 177, 131);
-$color-primary-light: #fcece5;
+$color-primary-light: white; //#fcece5
 $color-primary-dark: rgb(230, 191, 152);
 
 $color-secondary-light: #ffb900;
@@ -30,6 +30,9 @@ $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
 
 $color-white: #fff;
+
+$color-success: #d8e2dc;
+$color-danger: #fec5bb;
 
 // SIZES
 $sidebar-size: 30rem;

@@ -8,12 +8,16 @@ const Header = () => {
       <Navigation />
 
       <div className='header__logo-box'>
-        <Image
-          src='/images/roma-text.png'
-          alt='Roma'
-          width='190'
-          height='70px'
-        />
+        <Link href='/'>
+          <a>
+            <Image
+              src='/images/roma-text.png'
+              alt='Roma'
+              width='190'
+              height='70px'
+            />
+          </a>
+        </Link>
       </div>
       <Link href='/sacola' passHref>
         <div className='header__button header__button--left'>

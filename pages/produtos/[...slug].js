@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 import ProductList from '../../components/products/ProductList';
 import ProductSearch from '../../components/products/ProductSearch';
+import Alert from '../../components/ui/Alert';
 import { getFilteredProducts } from '../../data/products';
 
 const FilteredProductsPage = () => {
@@ -16,7 +17,9 @@ const FilteredProductsPage = () => {
   const products = getFilteredProducts(category);
 
   if (products) {
-    return <p>Nenhum produto encontrado nessa categoria</p>;
+    return (
+      <Alert variant='danger'>Nenhum produto encontrado nessa categoria</Alert>
+    );
   }
 
   const searchHandler = (category) => {
