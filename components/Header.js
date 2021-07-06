@@ -13,7 +13,7 @@ const Header = () => {
             <Image
               src='/images/roma-text.png'
               alt='Roma'
-              width='180'
+              width='175'
               height='60px'
               className='logo-image'
             />

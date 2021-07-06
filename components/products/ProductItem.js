@@ -1,14 +1,18 @@
-import Link from 'next/link';
 import Image from 'next/link';
+import Button from '../ui/Button';
 
 const ProductItem = ({ product }) => {
   return (
-    <li className='row'>
-      <div className='col'>
-        <Link href={`/produtos/${product.id}`}>
-          <a>{product.name}</a>
-        </Link>
+    <li className='col-phone-6 col-tab-port-4 col-tab-land-3 col-desktop-3 card'>
+      <div className='product-item'>
+        <img
+          src={product.image}
+          alt={product.name}
+          className='product-item__image'
+        />
         <h3 className='heading-tertiary'>{product.name}</h3>
+        <h4 className='heading-quaternary'>R$ {product.price}</h4>
+        <div className='image-box'></div>
       </div>
     </li>
   );

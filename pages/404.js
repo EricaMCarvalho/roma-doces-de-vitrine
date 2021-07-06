@@ -1,4 +1,4 @@
-const notFoundPage = () => {
+const notFoundScreen = () => {
   return (
     <h1 className='heading-primary'>
       A página solicitada não foi encontrada :(
@@ -6,4 +6,4 @@ const notFoundPage = () => {
   );
 };
 
-export default notFoundPage;
+export default notFoundScreen;

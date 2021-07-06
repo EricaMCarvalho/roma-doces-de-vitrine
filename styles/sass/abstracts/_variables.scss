@@ -14,7 +14,7 @@
 */
 
 $color-primary: rgb(223, 177, 131);
-$color-primary-light: white; //#fcece5
+$color-primary-light: #fcece5;
 $color-primary-dark: rgb(230, 191, 152);
 
 $color-secondary-light: #ffb900;
@@ -39,6 +39,4 @@ $sidebar-size: 30rem;
 
 $default-font-size: 1.6rem;
 
-$max-grid-width: 90vw;
-$gutter-vertical: 8rem;
-$gutter-horizontal: 6rem;
+$max-grid-width: 120rem;
