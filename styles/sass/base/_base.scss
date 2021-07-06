@@ -29,6 +29,7 @@ html {
 }
 
 main {
+  margin-top: 10rem;
   @include respond(tab-land) {
     padding: 3rem;
   }

@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import Hero from '../components/Hero';
 import ProductList from '../components/products/ProductList';
 import About from '../components/About';
+import Contact from '../components/Contact';
 import { getFeaturedProducts } from '../data/products';
 
 const HomeScreen = ({ featuredProducts }) => {
@@ -12,6 +13,7 @@ const HomeScreen = ({ featuredProducts }) => {
       <h2 className='heading-secondary'>Mais pedidos e novidades</h2>
       <ProductList products={featuredProducts} />
       <About />
+      <Contact />
     </Fragment>
   );
 };

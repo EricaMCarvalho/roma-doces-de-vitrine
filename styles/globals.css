@@ -42,9 +42,11 @@ html {
     html {
       font-size: 72%; } }
 
-@media (min-width: 56.25em) {
-  main {
-    padding: 3rem; } }
+main {
+  margin-top: 10rem; }
+  @media (min-width: 56.25em) {
+    main {
+      padding: 3rem; } }
 
 @keyframes moveInBottom {
   0% {
@@ -67,7 +69,7 @@ body {
   font-weight: 300;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
   padding: 1rem;
-  margin-top: 2rem; }
+  margin-top: 5rem; }
 
 .heading-secondary {
   font-family: 'Pinyon Script', cursive;
@@ -244,7 +246,8 @@ body {
 .main {
   padding-top: 5rem;
   margin: 0 auto;
-  max-width: 120rem; }
+  max-width: 120rem;
+  min-height: 100vh; }
 
 .navigation__checkbox {
   display: none; }
@@ -319,8 +322,8 @@ body {
 
 .about {
   position: relative;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
   background-color: #fcece5; }
   .about__text-box {
     padding: 2rem;
@@ -350,6 +353,36 @@ body {
   .about__image {
     width: 100%;
     margin-bottom: 3rem; }
+
+.contact__form {
+  margin-bottom: 3rem; }
+  .contact__form__controls {
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto; }
+  .contact__form__control {
+    width: 100%;
+    margin: auto;
+    padding: 1rem; }
+    @media (min-width: 37.5em) {
+      .contact__form__control {
+        width: 600px; } }
+  .contact__form__control label {
+    color: #dfb183; }
+  .contact__form__control input,
+  .contact__form__control textarea {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid #dfb183;
+    width: 100%;
+    font-family: inherit;
+    margin-top: 1rem; }
+
+.form__button {
+  display: block;
+  width: 200px;
+  margin: auto; }
 
 .hero {
   height: 90vh;

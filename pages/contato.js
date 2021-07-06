@@ -1,5 +1,7 @@
+import Contact from '../components/Contact';
+
 const ContactScreen = () => {
-  return <h1 className='heading-primary'>Contato - Página em construção</h1>;
+  return <Contact />;
 };
 
 export default ContactScreen;
