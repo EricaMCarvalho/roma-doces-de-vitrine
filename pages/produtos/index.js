@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { useRouter } from 'next/router';
 import ProductSearch from '../../components/products/ProductSearch';
 import ProductList from '../../components/products/ProductList';
-import { getAllProducts } from '../../data/products';
+import { getAllProducts } from '../../helpers/api-utils';
 
 const ProductsScreen = ({ products }) => {
   const router = useRouter();
@@ -31,7 +31,7 @@ export const getStaticProps = async () => {
     props: {
       products,
     },
-    revalidate: 10,
+    revalidate: 60, // pick up new products
   };
 };
 

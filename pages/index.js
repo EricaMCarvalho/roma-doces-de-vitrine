@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import ProductList from '../components/products/ProductList';
 import About from '../components/About';
 import Contact from '../components/Contact';
-import { getFeaturedProducts } from '../data/products';
+import { getFeaturedProducts } from '../helpers/api-utils';
 
 const HomeScreen = ({ featuredProducts }) => {
   return (
@@ -19,12 +19,13 @@ const HomeScreen = ({ featuredProducts }) => {
 };
 
 export const getStaticProps = async () => {
-  const featuredProducts = getFeaturedProducts();
+  const featuredProducts = await getFeaturedProducts();
+
   return {
     props: {
       featuredProducts,
     },
-    revalidate: 10,
+    revalidate: 1800,
   };
 };
 

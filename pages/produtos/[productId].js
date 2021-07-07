@@ -19,10 +19,17 @@ const ProductDetailsPage = ({ product }) => {
 export const getStaticProps = async (context) => {
   const product = getProductById(context.params.productId);
 
+  if (!product) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       product,
     },
+    revalidate: 30,
   };
 };
 
